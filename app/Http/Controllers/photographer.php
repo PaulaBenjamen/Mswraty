@@ -35,6 +35,7 @@ class photographer extends Controller
      */
     public function store(Request $request)
     {
+        
         //
     }
 
