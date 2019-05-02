@@ -1,0 +1,95 @@
+<style>
+    .hidden{
+        display: none;
+    }
+</style>
+<table border="1">
+    <tr>
+        <th>one</th>
+        <th>two</th>
+        <th>three</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td><button id="toggel" onclick="toggle(1)" class="toggelButton" >toggel</button> </td>
+        
+    </tr>
+    <tr style="height: 100px ; width: 20px; color: brown ; " class="hidden" id="row_data_1">
+        
+            <th>one hidden</th>
+            <th>two hidden</th>
+            <th>three hidden</th>
+            <th>four hidden</th>
+            <th>five hidden</th>
+        
+    <tr style="height: 100px ; width: 20px; color: brown ; " class="hidden" id="row_hidden_data_1">
+        <th>1 hidden</th>
+        <th>2 hidden</th>
+        <th>3 hidden</th>
+        <th>4 hidden</th>
+        <th>5 hidden</th>
+    </tr>
+    
+        
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td><button id="toggel" onclick="toggle(2)" class="toggelButton">toggel</button> 
+            
+        </td>
+        
+    </tr>
+    <tr style="height: 100px ; width: 20px; color: brown ; " class="hidden" id="row_data_2">
+        <th>one hidden</th>
+        <th>two hidden</th>
+        <th>three hidden</th>
+        <th>four hidden</th>
+        <th>five hidden</th>
+    </tr>
+    <tr style="height: 100px ; width: 20px; color: brown ; " class="hidden" id="row_hidden_data_2">
+        <th>1 hidden</th>
+        <th>2 hidden</th>
+        <th>3 hidden</th>
+        <th>4 hidden</th>
+        <th>5 hidden</th>
+    </tr>
+</table>
+<script>
+    
+        /*var button = document.getElementById('toggel');
+        console.log(button.length);
+        //console.log(button.onclick)
+        //for(var i=0;i<button.length;i++){
+            
+            button.onclick = function(){
+                
+                var td = document.getElementById('row_data_1' );
+                //console.log(j);
+                if (td.className == 'active'){
+                    td.className = 'hidden';
+                }
+                else{
+                    td.className = 'active';
+                }
+                //i =0 ;
+            }
+            
+        //}*/
+        function toggle(i){
+            var td = document.getElementById('row_data_' +i );
+            var thd = document.getElementById('row_hidden_data_' + i)
+                //console.log(j);
+                if (td.className == 'active'){
+                    td.className = 'hidden';
+                    thd.className = 'hidden';
+                }
+                else{
+                    td.className = 'active';
+                    thd.className = 'active';
+                }
+            
+        }
+</script>
